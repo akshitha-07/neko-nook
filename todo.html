@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Neko Nook | To-Do List</title>
+
+    <link rel="stylesheet" href="todo.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    />
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <img src="img/logo.jpeg" alt="Neko Nook logo">
+            Neko Nook
+        </a>
+
+        <a href="index.html" class="back-btn">
+            ← Back to Café
+        </a>
+    </header>
+
+
+    <main class="todo-page">
+
+        <div class="todo-heading">
+            <span>YOUR STUDY CORNER</span>
+            <h1>Today's Tasks</h1>
+            <p>
+                A little progress is still progress.
+                Let's get things done.
+            </p>
+        </div>
+
+
+        <div class="todo-container">
+
+            <form class="task-form" id="taskForm">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="What do you need to do?"
+                    autocomplete="off"
+                >
+
+                <button type="submit">+</button>
+            </form>
+
+
+            <div class="task-options">
+                <button class="filter-btn active" data-filter="all">
+                    All
+                </button>
+
+                <button class="filter-btn" data-filter="active">
+                    Active
+                </button>
+
+                <button class="filter-btn" data-filter="completed">
+                    Completed
+                </button>
+            </div>
+
+
+            <div class="task-list" id="taskList">
+                <!-- Tasks will appear here -->
+            </div>
+
+
+            <div class="todo-footer">
+
+                <span id="taskCount">
+                    0 tasks left
+                </span>
+
+                <button id="clearCompleted">
+                    Clear completed
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="todo.js"></script>
+
+</body>
+</html>
