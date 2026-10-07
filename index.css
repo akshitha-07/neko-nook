@@ -425,3 +425,696 @@ footer {
     font-size: 2.2rem;
   }
 }
+
+.study-planner {
+  background: #ffffff;
+}
+
+.planner-subtitle {
+  margin-top: 15px;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.planner-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.planner-card {
+  background: var(--bg);
+  padding: 35px;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+  transition: 0.35s ease;
+}
+
+.planner-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(62, 78, 136, 0.16);
+}
+
+.planner-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.small-label {
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.planner-card h3 {
+  color: var(--primary);
+  font-size: 1.8rem;
+  margin-top: 6px;
+}
+
+.task-count {
+  background: white;
+  color: var(--primary);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.todo-input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+#todo-input {
+  flex: 1;
+  border: 2px solid transparent;
+  background: white;
+  padding: 15px 18px;
+  border-radius: 14px;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+  transition: 0.3s;
+}
+
+#todo-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(168, 231, 251, 0.2);
+}
+
+#todo-input::placeholder {
+  color: #9aa7b8;
+}
+
+
+.add-btn {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 14px;
+  background: var(--primary);
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background: var(--primary-dark);
+  transform: scale(1.05);
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  padding: 14px 16px;
+  border-radius: 14px;
+  transition: 0.3s;
+}
+
+.todo-item:hover {
+  transform: translateX(4px);
+}
+
+.todo-item.completed {
+  opacity: 0.6;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: var(--text-light);
+}
+.todo-checkbox {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--primary);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+
+.todo-text {
+  flex: 1;
+  font-size: 0.9rem;
+  color: var(--text);
+  word-break: break-word;
+}
+
+.delete-todo {
+  border: none;
+  background: transparent;
+  color: #9aa7b8;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete-todo:hover {
+  color: #e57373;
+  transform: scale(1.15);
+}
+.todo-progress {
+  margin-top: 25px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#todo-progress-fill {
+  width: 0%;
+  height: 100%;
+  background: var(--accent);
+  border-radius: 20px;
+  transition: width 0.4s ease;
+}
+
+#progress-text {
+  margin-top: 8px;
+  text-align: right;
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+.journal-date {
+  background: white;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+.mood-section {
+  margin-bottom: 22px;
+}
+
+.mood-section > p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 12px;
+}
+
+.mood-options {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.mood-btn {
+  border: 2px solid transparent;
+  background: white;
+  border-radius: 14px;
+  padding: 9px 11px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: 0.3s;
+}
+
+.mood-btn span {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.7rem;
+  color: var(--text-light);
+}
+
+.mood-btn:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+.mood-btn.active {
+  border-color: var(--primary);
+  background: var(--accent-light);
+  transform: translateY(-3px);
+}
+
+
+
+#journal-entry {
+  width: 100%;
+  min-height: 190px;
+  resize: vertical;
+  border: 2px solid transparent;
+  border-radius: 18px;
+  padding: 18px;
+  background: white;
+  color: var(--text);
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  outline: none;
+  transition: 0.3s;
+}
+
+#journal-entry:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(168, 231, 251, 0.2);
+}
+
+#journal-entry::placeholder {
+  color: #9aa7b8;
+}
+
+
+
+.journal-footer {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#character-count {
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+
+
+.save-btn {
+  border: none;
+  background: var(--primary);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  transition: 0.3s;
+}
+
+.save-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+
+.journal-status {
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: var(--primary);
+  min-height: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+
+  .planner-container {
+    grid-template-columns: 1fr;
+  }
+
+  .planner-card {
+    padding: 25px 20px;
+  }
+
+  .planner-card-header {
+    gap: 10px;
+  }
+
+  .planner-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .journal-date {
+    font-size: 0.65rem;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .todo-input-container {
+    gap: 7px;
+  }
+
+  #todo-input {
+    padding: 13px;
+    font-size: 0.8rem;
+  }
+
+  .add-btn {
+    width: 46px;
+    height: 46px;
+  }
+
+  .mood-options {
+    gap: 6px;
+  }
+
+  .mood-btn {
+    padding: 7px 9px;
+  }
+
+  .journal-footer {
+    align-items: flex-end;
+    gap: 10px;
+  }
+
+  .save-btn {
+    padding: 10px 15px;
+    font-size: 0.8rem;
+  }
+}
+.study-planner {
+    background: #ffffff;
+}
+
+.planner-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 0 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.planner-card {
+    background: #EDF7F6;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.planner-card:hover {
+    transform: translateY(-5px);
+}
+
+.planner-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.planner-header h3 {
+    font-size: 1.6rem;
+    color: #3E4E88;
+    margin-top: 5px;
+}
+
+.small-label {
+    color: #a8e7fb;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.task-count {
+    background: #fff;
+    color: #3E4E88;
+    padding: 8px 13px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.todo-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#todo-input {
+    flex: 1;
+    padding: 13px 15px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background: #fff;
+    font-size: 0.9rem;
+}
+
+#todo-input:focus {
+    box-shadow: 0 0 0 2px #a8e7fb;
+}
+
+#add-todo {
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 10px;
+    background: #3E4E88;
+    color: #fff;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#add-todo:hover {
+    background: #2E3B68;
+    transform: scale(1.05);
+}
+
+#todo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    padding: 13px;
+    border-radius: 10px;
+}
+
+.todo-checkbox {
+    width: 18px;
+    height: 18px;
+    accent-color: #3E4E88;
+    cursor: pointer;
+}
+
+.todo-text {
+    flex: 1;
+    font-size: 0.9rem;
+    color: #27374D;
+}
+
+.todo-item.completed .todo-text {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.delete-todo {
+    border: none;
+    background: transparent;
+    color: #999;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.delete-todo:hover {
+    color: #e57373;
+}
+
+.todo-progress {
+    margin-top: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#progress-fill {
+    width: 0%;
+    height: 100%;
+    background: #a8e7fb;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+#progress-text {
+    text-align: right;
+    margin-top: 7px;
+    font-size: 0.8rem;
+    color: #5A6A85;
+}
+
+.mood-section {
+    margin-bottom: 20px;
+}
+
+.mood-section p {
+    color: #5A6A85;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.mood-options {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.mood-btn {
+    border: 2px solid transparent;
+    background: #fff;
+    border-radius: 12px;
+    padding: 8px 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.mood-btn span {
+    display: block;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.65rem;
+    color: #5A6A85;
+    margin-top: 3px;
+}
+
+.mood-btn:hover {
+    transform: translateY(-3px);
+    border-color: #a8e7fb;
+}
+
+.mood-btn.active {
+    background: #D8F3FA;
+    border-color: #3E4E88;
+    transform: translateY(-3px);
+}
+
+#journal-entry {
+    width: 100%;
+    min-height: 170px;
+    resize: vertical;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 15px;
+    background: #fff;
+    color: #27374D;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+#journal-entry:focus {
+    box-shadow: 0 0 0 2px #a8e7fb;
+}
+
+.journal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#character-count {
+    color: #5A6A85;
+    font-size: 0.75rem;
+}
+
+#save-journal {
+    border: none;
+    background: #3E4E88;
+    color: #fff;
+    padding: 11px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    transition: 0.3s;
+}
+
+#save-journal:hover {
+    background: #2E3B68;
+    transform: translateY(-2px);
+}
+
+#journal-status {
+    color: #3E4E88;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    min-height: 18px;
+}
+
+#journal-date {
+    background: #fff;
+    color: #5A6A85;
+    padding: 7px 10px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+}
+
+@media (max-width: 768px) {
+
+    .planner-container {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .planner-card {
+        padding: 25px 20px;
+    }
+
+    .planner-header h3 {
+        font-size: 1.4rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .planner-container {
+        padding: 0 10px;
+    }
+
+    .mood-options {
+        gap: 5px;
+    }
+
+    .mood-btn {
+        padding: 7px 8px;
+    }
+
+    .journal-footer {
+        gap: 10px;
+        align-items: flex-end;
+    }
+
+    #save-journal {
+        padding: 9px 13px;
+        font-size: 0.75rem;
+    }
+
+}
