@@ -17,6 +17,7 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/scrollreveal"></script>
   </head>
 
   <body>
@@ -31,9 +32,9 @@
 
       <ul class="navbar">
         <li><a href="#home">Home</a></li>
-
+        <li><a href="#choice">Penguins</a></li>
         <li><a href="#features">Features</a></li>
-
+        <li><a href="#planner">Study Planner</a></li>
         <li><a href="#footer">Contact</a></li>
       </ul>
 
@@ -156,7 +157,126 @@
         </div>
       </div>
     </section>
+     <section class="study-planner" id="planner">
 
+    <div class="heading">
+       
+        <h2>Your Study Planner</h2>
+    </div>
+
+    <div class="planner-container">
+
+        <div class="planner-card">
+
+            <div class="planner-header">
+                <div>
+                    <span class="small-label">Today's Tasks</span>
+                    <h3>My To-Do List</h3>
+                </div>
+
+                <span class="task-count">
+                    <span id="completed-count">0</span>/<span id="total-count">0</span>
+                </span>
+            </div>
+
+            <div class="todo-input">
+                <input
+                    type="text"
+                    id="todo-input"
+                    placeholder="Add a study task..."
+                >
+
+                <button id="add-todo">
+                    <i class="bx bx-plus"></i>
+                </button>
+            </div>
+
+            <ul id="todo-list"></ul>
+
+            <div class="todo-progress">
+
+                <div class="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+
+                <p id="progress-text">0% completed</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="planner-card">
+
+            <div class="planner-header">
+                <div>
+                    <span class="small-label">Today's Reflection</span>
+                    <h3>Daily Journal</h3>
+                </div>
+
+                <span id="journal-date"></span>
+            </div>
+
+
+            <div class="mood-section">
+
+                <p>How are you feeling today?</p>
+
+                <div class="mood-options">
+
+                    <button class="mood-btn" data-mood="😴">
+                        😴
+                        <span>Tired</span>
+                    </button>
+
+                    <button class="mood-btn" data-mood="😐">
+                        😐
+                        <span>Okay</span>
+                    </button>
+
+                    <button class="mood-btn" data-mood="😰">
+                        😰
+                        <span>Stressed</span>
+                    </button>
+
+                    <button class="mood-btn" data-mood="😊">
+                        😊
+                        <span>Happy</span>
+                    </button>
+
+                    <button class="mood-btn" data-mood="🔥">
+                        🔥
+                        <span>Focused</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <textarea
+                id="journal-entry"
+                placeholder="Write about your day, what you studied, or how you are feeling..."
+            ></textarea>
+
+            <div class="journal-footer">
+
+                <span id="character-count">0 / 500</span>
+
+                <button id="save-journal">
+                    <i class="bx bx-save"></i>
+                    Save Journal
+                </button>
+
+            </div>
+
+            <p id="journal-status"></p>
+
+        </div>
+
+    </div>
+
+</section>
     <!-- Footer -->
 
     <footer id="footer">
@@ -178,5 +298,10 @@
         </p>
       </div>
     </footer>
+    <footer id="footer">
+    ...
+</footer>
+
+<script src="script.js"></script>
   </body>
 </html>
