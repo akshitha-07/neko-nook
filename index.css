@@ -1,21 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap");
-
 :root {
   --bg: #EDF7F6;
   --card: #FFFFFF;
-
   --primary: #3E4E88;
   --primary-dark: #2E3B68;
-
   --accent: #a8e7fb;
   --accent-light: #D8F3FA;
-
   --text: #27374D;
   --text-light: #5A6A85;
-
   --shadow: 0 10px 30px rgba(62, 78, 136, 0.12);
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -24,28 +18,21 @@
   list-style: none;
   scroll-behavior: smooth;
 }
-
 body {
   font-family: "Poppins", sans-serif;
   background: var(--bg);
   color: var(--text);
 }
-
 img {
   width: 100%;
   display: block;
 }
-
 section {
   padding: 100px 8%;
 }
-
-h1,
-h2,
-h3 {
+h1,h2,h3 {
   font-family: "DM Serif Display", serif;
 }
-
 header {
   position: fixed;
   top: 0;
@@ -56,17 +43,11 @@ header {
   justify-content: space-between;
   align-items: center;
   /* background: rgba(233, 248, 250, 0.95); */
-  background: linear-gradient(
-    135deg,
-    #FFFFFF,
-    #ddf1f6,
-    #c0ecfa
-);
+  background: linear-gradient( 135deg, #FFFFFF, #ddf1f6,#c0ecfa);
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow);
   z-index: 1000;
 }
-
 .logo{
     display:flex;
     align-items:center;
@@ -76,32 +57,25 @@ header {
     font-family:"DM Serif Display", serif;
     font-weight:400;
 }
-
 .logo img{
     width:48px;
     height:48px;
     object-fit:contain;
     display:block;
 }
-
-
-
 .navbar {
   display: flex;
   gap: 35px;
 }
-
 .navbar a {
   color: var(--text);
   font-weight: 500;
   position: relative;
   transition: 0.3s;
 }
-
 .navbar a:hover {
   color: var(--accent);
 }
-
 .navbar a::after {
   content: "";
   position: absolute;
@@ -112,11 +86,9 @@ header {
   background: var(--accent);
   transition: 0.3s;
 }
-
 .navbar a:hover::after {
   width: 100%;
 }
-
 .nav-btn {
   background: var(--primary);
   color: #fff;
@@ -124,11 +96,9 @@ header {
   border-radius: 50px;
   transition: 0.3s;
 }
-
 .nav-btn:hover {
   background: var(--primary-dark);
 }
-
 .hero {
   min-height: 100vh;
   display: grid;
@@ -137,20 +107,17 @@ header {
   gap: 60px;
   padding-top: 140px;
 }
-
 .hero-text span {
   color: var(--accent);
   font-weight: 600;
   letter-spacing: 1px;
 }
-
 .hero-text h1 {
   font-size: 4.8rem;
   line-height: 1.1;
   margin: 25px 0;
   color: var(--text);
 }
-
 .hero-text p {
   max-width: 520px;
   line-height: 1.8;
@@ -158,12 +125,10 @@ header {
   margin-bottom: 40px;
   font-size: 1.05rem;
 }
-
 .hero-buttons {
   display: flex;
   gap: 20px;
 }
-
 .primary-btn {
   background: var(--accent);
   color: #fff;
@@ -172,12 +137,10 @@ header {
   font-weight: 500;
   transition: 0.35s;
 }
-
 .primary-btn:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 20px rgba(191, 214, 233, 0.35);
 }
-
 .secondary-btn {
   padding: 16px 34px;
   border: 2px solid var(--accent);
@@ -186,72 +149,49 @@ header {
   font-weight: 500;
   transition: 0.35s;
 }
-
 .secondary-btn:hover {
   background: var(--accent-light);
 }
-
 .hero-image {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .hero-image img {
   width: 500px;
   animation: float 4s ease-in-out infinite;
 }
-
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
 .heading {
   text-align: center;
   margin-bottom: 60px;
 }
-
 .heading span {
   color: var(--accent);
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-
 .heading h2 {
   font-size: 3rem;
   margin-top: 12px;
   color: var(--text);
 }
-
 .features {
   background: #EDF7F6;
 }
-
 .feature-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
 }
-
 .choice{
   background-color: white;
 }
-
 .choice-container{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
 }
-
 .card {
   background: var(--bg);
   padding: 35px 30px;
@@ -261,12 +201,10 @@ header {
   transition: 0.35s;
   cursor: pointer;
 }
-
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
 }
-
 .icon {
   width: 80px;
   height: 80px;
@@ -279,55 +217,46 @@ header {
   font-size: 2.3rem;
   transition: 0.35s;
 }
-
 .icon img{
     width:100%;
     height:100%;
     object-fit:cover;
     border-radius:50%;
 }
-
 .card:hover .icon {
   transform: rotate(10deg) scale(1.1);
   background: white;
 }
-
 .card h3 {
   font-size: 1.8rem;
   margin-bottom: 15px;
   color: var(--primary);
 }
-
 .card p {
   color: var(--text-light);
   line-height: 1.8;
   font-size: 0.95rem;
 }
-
 footer {
   background: var(--primary);
   color: #fff;
   padding: 70px 8% 40px;
   text-align: center;
 }
-
 .footer-content h2 {
   font-size: 2.8rem;
   margin-bottom: 15px;
 }
-
 .footer-content p {
   color: #f2f2f2;
   line-height: 1.8;
 }
-
 .socials {
   margin: 35px 0;
   display: flex;
   justify-content: center;
   gap: 18px;
 }
-
 .socials a {
   width: 55px;
   height: 55px;
@@ -340,88 +269,12 @@ footer {
   font-size: 1.4rem;
   transition: 0.35s;
 }
-
 .socials a:hover {
   background: var(--accent);
   transform: translateY(-6px);
 }
-
 .copyright {
   margin-top: 25px;
   font-size: 0.9rem;
   opacity: 0.8;
-}
-
-@media (max-width: 992px) {
-  .hero {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 40px;
-  }
-
-  .hero-text p {
-    margin: 0 auto 40px;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-  }
-
-  .hero-image img {
-    width: 380px;
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    padding: 18px 5%;
-  }
-
-  .navbar {
-    display: none;
-  }
-
-  .hero {
-    padding: 130px 5% 80px;
-  }
-
-  .hero-text h1 {
-    font-size: 3.3rem;
-  }
-
-  section {
-    padding: 80px 5%;
-  }
-
-  .heading h2 {
-    font-size: 2.3rem;
-  }
-
-  .feature-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-text h1 {
-    font-size: 2.6rem;
-  }
-
-  .hero-image img {
-    width: 280px;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-  }
-
-  .primary-btn,
-  .secondary-btn {
-    width: 100%;
-    text-align: center;
-  }
-
-  .footer-content h2 {
-    font-size: 2.2rem;
-  }
 }

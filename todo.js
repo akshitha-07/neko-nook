@@ -10,8 +10,10 @@ let tasks = [];
 
 let currentFilter = "all";
 
-
-/* Add a task */
+/*At the beginning, I obtain references to the important HTML elements using getElementById() and 
+querySelectorAll(). I then maintain two important pieces of state: tasks, which stores all of the 
+task objects, and currentFilter, which determines which subset of those tasks should currently be displayed.
+*/
 
 taskForm.addEventListener("submit", function (event) {
 
