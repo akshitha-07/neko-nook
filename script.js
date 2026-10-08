@@ -89,3 +89,25 @@ if (logo) {
         window.location.href = "index.html";
     });
 }
+
+// ==========================================
+// Penguin Study Buddy Selection
+// ==========================================
+
+const penguinCards =
+    document.querySelectorAll(".penguin-card");
+
+
+penguinCards.forEach(card => {
+
+    card.addEventListener("click", function () {
+
+        const penguin =
+            card.dataset.penguin;
+
+        window.location.href =
+            `study.html?penguin=${penguin}`;
+
+    });
+
+});

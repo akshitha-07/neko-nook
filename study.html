@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Neko Nook | Study Room</title>
+
+    <link rel="stylesheet" href="study.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    />
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <a href="index.html" class="logo">
+            <img src="img/logo.jpeg" alt="Neko Nook logo">
+            Neko Nook
+        </a>
+
+        <a href="index.html" class="back-btn">
+            ← Back to Café
+        </a>
+
+    </header>
+
+
+    <!-- Study Room -->
+    <main class="study-room">
+
+        <!-- Left side: Pomodoro -->
+        <section class="timer-section">
+
+            <div class="timer-card">
+
+                <!-- Settings button -->
+                <div class="timer-top">
+
+                    <h2>Study Timer</h2>
+
+                    <button
+                        class="settings-btn"
+                        id="settingsBtn"
+                        type="button"
+                    >
+                        ⚙ Settings
+                    </button>
+
+                </div>
+
+
+                <!-- Timer settings -->
+                <div class="settings-panel" id="settingsPanel">
+
+                    <h3>Timer Settings</h3>
+
+                    <div class="setting-row">
+
+                        <label for="focusInput">
+                            Focus time
+                        </label>
+
+                        <div class="time-input">
+                            <input
+                                type="number"
+                                id="focusInput"
+                                min="1"
+                                max="120"
+                                value="25"
+                            >
+                            <span>min</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="setting-row">
+
+                        <label for="shortInput">
+                            Short break
+                        </label>
+
+                        <div class="time-input">
+                            <input
+                                type="number"
+                                id="shortInput"
+                                min="1"
+                                max="60"
+                                value="5"
+                            >
+                            <span>min</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="setting-row">
+
+                        <label for="longInput">
+                            Long break
+                        </label>
+
+                        <div class="time-input">
+                            <input
+                                type="number"
+                                id="longInput"
+                                min="1"
+                                max="120"
+                                value="10"
+                            >
+                            <span>min</span>
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="save-settings"
+                        id="saveSettings"
+                        type="button"
+                    >
+                        Save Settings
+                    </button>
+
+                </div>
+
+
+                <!-- Timer -->
+                <div class="timer-display">
+
+                    <span id="timerMode">
+                        Focus Time
+                    </span>
+
+                    <div id="timer">
+                        25:00
+                    </div>
+
+                </div>
+
+
+                <!-- Timer mode buttons -->
+                <div class="timer-modes">
+
+                    <button
+                        class="mode-btn active"
+                        data-mode="focus"
+                        type="button"
+                    >
+                        Focus
+                    </button>
+
+                    <button
+                        class="mode-btn"
+                        data-mode="short"
+                        type="button"
+                    >
+                        Short Break
+                    </button>
+
+                    <button
+                        class="mode-btn"
+                        data-mode="long"
+                        type="button"
+                    >
+                        Long Break
+                    </button>
+
+                </div>
+
+
+                <!-- Timer controls -->
+                <div class="timer-controls">
+
+                    <button
+                        class="start-btn"
+                        id="startBtn"
+                        type="button"
+                    >
+                        Start
+                    </button>
+
+                    <button
+                        class="pause-btn hidden"
+                        id="pauseBtn"
+                        type="button"
+                    >
+                        Pause
+                    </button>
+
+                    <button
+                        class="reset-btn hidden"
+                        id="resetBtn"
+                        type="button"
+                    >
+                        Reset
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Motivation -->
+            <div class="motivation-card">
+
+                <span class="quote-mark">“</span>
+
+                <p id="motivationText">
+                    Let's take it one step at a time.
+                </p>
+
+                <span class="quote-mark closing">”</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Right side: Penguin -->
+        <section class="buddy-section">
+
+            <div class="buddy-content">
+
+                <span class="buddy-label">
+                    YOUR STUDY BUDDY
+                </span>
+
+                <h1 id="penguinName">
+                    Flurry
+                </h1>
+
+                <p class="buddy-mood" id="penguinMood">
+                    Struggling to start
+                </p>
+
+                <div class="penguin-image">
+
+                    <img
+                        id="penguinImage"
+                        src="img/flurry.jpg"
+                        alt="Flurry the penguin"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="study.js"></script>
+
+</body>
+
+</html>

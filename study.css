@@ -1,0 +1,685 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap");
+
+
+:root {
+    --bg: #EDF7F6;
+    --card: #FFFFFF;
+
+    --primary: #3E4E88;
+    --primary-dark: #2E3B68;
+
+    --accent: #a8e7fb;
+    --accent-light: #D8F3FA;
+
+    --text: #27374D;
+    --text-light: #5A6A85;
+
+    --shadow: 0 10px 30px rgba(62, 78, 136, 0.12);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Poppins", sans-serif;
+
+    background: var(--bg);
+    color: var(--text);
+
+    min-height: 100vh;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    width: 100%;
+
+    padding: 20px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #FFFFFF,
+        #ddf1f6,
+        #c0ecfa
+    );
+
+    box-shadow: var(--shadow);
+
+    position: relative;
+    z-index: 10;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-family: "DM Serif Display", serif;
+    font-size: 2rem;
+
+    color: var(--primary);
+
+    text-decoration: none;
+}
+
+
+.logo img {
+    width: 48px;
+    height: 48px;
+
+    object-fit: contain;
+}
+
+
+.back-btn {
+    padding: 12px 22px;
+
+    background: var(--primary);
+    color: white;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.back-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   STUDY ROOM
+========================= */
+
+.study-room {
+    min-height: calc(100vh - 89px);
+
+    padding: 70px 8%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+/* =========================
+   TIMER
+========================= */
+
+.timer-section {
+    width: 100%;
+}
+
+
+.timer-card {
+    width: 100%;
+
+    background: var(--card);
+
+    padding: 35px;
+
+    border-radius: 28px;
+
+    box-shadow: var(--shadow);
+}
+
+
+/* Top row */
+
+.timer-top {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+
+.timer-top h2 {
+    font-family: "DM Serif Display", serif;
+
+    font-size: 2rem;
+
+    color: var(--primary);
+}
+
+
+.settings-btn {
+    border: none;
+
+    background: var(--bg);
+    color: var(--primary);
+
+    padding: 9px 14px;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    font-family: "Poppins", sans-serif;
+
+    transition: 0.3s;
+}
+
+
+.settings-btn:hover {
+    background: var(--accent-light);
+}
+
+
+/* =========================
+   SETTINGS PANEL
+========================= */
+
+.settings-panel {
+    display: none;
+
+    background: var(--bg);
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    margin-bottom: 25px;
+}
+
+
+.settings-panel.show {
+    display: block;
+}
+
+
+.settings-panel h3 {
+    font-family: "DM Serif Display", serif;
+
+    font-size: 1.4rem;
+
+    color: var(--primary);
+
+    margin-bottom: 15px;
+}
+
+
+.setting-row {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 12px;
+
+    color: var(--text-light);
+}
+
+
+.time-input {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+.time-input input {
+    width: 60px;
+
+    padding: 7px 8px;
+
+    border: 1px solid #d9e5e8;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    font-family: "Poppins", sans-serif;
+
+    color: var(--text);
+
+    outline: none;
+}
+
+
+.time-input input:focus {
+    border-color: var(--accent);
+}
+
+
+.save-settings {
+    width: 100%;
+
+    margin-top: 8px;
+
+    padding: 11px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: var(--primary);
+
+    color: white;
+
+    cursor: pointer;
+
+    font-family: "Poppins", sans-serif;
+
+    transition: 0.3s;
+}
+
+
+.save-settings:hover {
+    background: var(--primary-dark);
+}
+
+
+/* =========================
+   TIMER DISPLAY
+========================= */
+
+.timer-display {
+    text-align: center;
+
+    padding: 20px 0 25px;
+}
+
+
+#timerMode {
+    display: block;
+
+    color: var(--text-light);
+
+    font-size: 0.95rem;
+
+    margin-bottom: 8px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+#timer {
+    font-family: "DM Serif Display", serif;
+
+    font-size: 6rem;
+
+    line-height: 1;
+
+    color: var(--primary);
+}
+
+
+/* =========================
+   TIMER MODES
+========================= */
+
+.timer-modes {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-bottom: 25px;
+}
+
+
+.mode-btn {
+    border: none;
+
+    padding: 9px 14px;
+
+    border-radius: 50px;
+
+    background: var(--bg);
+
+    color: var(--text-light);
+
+    cursor: pointer;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 0.85rem;
+
+    transition: 0.3s;
+}
+
+
+.mode-btn:hover {
+    background: var(--accent-light);
+}
+
+
+.mode-btn.active {
+    background: var(--primary);
+
+    color: white;
+}
+
+
+/* =========================
+   TIMER CONTROLS
+========================= */
+
+.timer-controls {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+
+.timer-controls button {
+    border: none;
+
+    padding: 13px 25px;
+
+    border-radius: 50px;
+
+    font-family: "Poppins", sans-serif;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.start-btn {
+    background: var(--primary);
+
+    color: white;
+}
+
+
+.start-btn:hover {
+    background: var(--primary-dark);
+
+    transform: translateY(-2px);
+}
+
+
+.pause-btn {
+    background: var(--accent);
+
+    color: white;
+}
+
+
+.pause-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+.reset-btn {
+    background: var(--bg);
+
+    color: var(--primary);
+}
+
+
+.reset-btn:hover {
+    background: var(--accent-light);
+}
+
+
+/* Hidden utility */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================
+   MOTIVATION
+========================= */
+
+.motivation-card {
+    margin-top: 20px;
+
+    padding: 20px 30px;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    color: var(--text-light);
+
+    box-shadow: var(--shadow);
+}
+
+
+.motivation-card p {
+    line-height: 1.7;
+
+    font-size: 0.95rem;
+}
+
+
+.quote-mark {
+    display: block;
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: 2.5rem;
+
+    line-height: 0.8;
+
+    color: var(--accent);
+}
+
+
+.quote-mark.closing {
+    margin-top: 8px;
+}
+
+
+/* =========================
+   PENGUIN / STUDY BUDDY
+========================= */
+
+.buddy-section {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+.buddy-content {
+    width: 100%;
+}
+
+
+.buddy-label {
+    color: var(--primary);
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+
+.buddy-content h1 {
+    font-family: "DM Serif Display", serif;
+
+    font-size: 4rem;
+
+    color: var(--text);
+
+    margin: 10px 0 5px;
+}
+
+
+.buddy-mood {
+    color: var(--text-light);
+
+    font-size: 1rem;
+
+    margin-bottom: 30px;
+}
+
+
+/* Penguin */
+
+.penguin-image {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.penguin-image img {
+    width: 360px;
+    height: 360px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    box-shadow: var(--shadow);
+
+    animation: float 4s ease-in-out infinite;
+}
+
+
+/* Floating animation */
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+
+    .study-room {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+        padding: 60px 8%;
+    }
+
+
+    .buddy-section {
+        order: -1;
+    }
+
+
+    .penguin-image img {
+        width: 300px;
+        height: 300px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 18px 5%;
+    }
+
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .back-btn {
+        padding: 10px 15px;
+
+        font-size: 0.85rem;
+    }
+
+
+    .study-room {
+        padding: 45px 5%;
+    }
+
+
+    .timer-card {
+        padding: 25px 18px;
+    }
+
+
+    .timer-top h2 {
+        font-size: 1.6rem;
+    }
+
+
+    #timer {
+        font-size: 4.5rem;
+    }
+
+
+    .timer-modes {
+        flex-wrap: wrap;
+    }
+
+
+    .buddy-content h1 {
+        font-size: 3rem;
+    }
+
+
+    .penguin-image img {
+        width: 250px;
+        height: 250px;
+    }
+
+}
